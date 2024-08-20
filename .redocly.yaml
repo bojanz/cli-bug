@@ -1,0 +1,10 @@
+extends:
+  - recommended
+decorators:
+  remove-x-internal: error
+
+rules:
+  # https://redoc.ly/docs/cli/built-in-rules/
+  security-defined: off
+  tag-description: off
+  operation-4xx-response: off

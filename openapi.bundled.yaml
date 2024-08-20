@@ -1,0 +1,25 @@
+openapi: 3.0.3
+info:
+  version: 1.0.0
+  title: Product API
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+  - url: https://api.myproduct-service.io
+tags:
+  - name: Products
+paths:
+  /products/{product_id}/clowncopterize:
+    parameters:
+      - $ref: '#/components/parameters/ProductID'
+components:
+  parameters:
+    ProductID:
+      name: product_id
+      in: path
+      required: true
+      description: The ID of the product.
+      schema:
+        type: string
+        format: ulid
